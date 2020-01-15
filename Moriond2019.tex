@@ -1,0 +1,105 @@
+\documentclass[9pt]{beamer}
+\usetheme{Madrid}
+\usepackage{mathtools}
+\usepackage[T1]{fontenc}
+\usepackage[english,french,spanish,italian]{babel}
+\usepackage[useregional]{datetime2}
+\usepackage{bm}
+\usepackage{esvect}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{empheq}
+\usepackage[many]{tcolorbox}
+\input{pool/NextDefs.tex}
+
+%$\vv{\bm{L}}
+
+\title{Status and prospects of the NEXT experiment}
+ 
+%\subtitle{Report to the LSC Scientific Committee}
+ 
+\author{J.J. G\'omez Cadenas on behalf of the NEXT collaboration}
+ 
+\institute{Donostia International Physics Center (DIPC)} % (optional)
+ 
+\date[March, 19, 2019] % (optional)
+%{PHYSIS, SAN SEBASTIAN: 2-6 OCTOBER 2018}
+ 
+%\logo{\includegraphics[height=0.5cm]{dipc.png}
+%\includegraphics[height=0.5cm]{IB.png}}
+
+
+\tcbset{highlight math style={enhanced,
+  colframe=red!60!black,colback=yellow!50!white,arc=4pt,boxrule=1pt,
+  }}
+
+\newtcbox{\mybox}[1][]{nobeforeafter,math upper,tcbox raise base,
+  enhanced,frame hidden,boxrule=0pt,interior style={top color=green!10!white,
+  bottom color=green!10!white,middle color=green!50!yellow},
+  fuzzy halo=1pt with green,drop large lifted shadow,#1}
+  
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+\selectlanguage{english}
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+%---------------------------------------------------------
+
+
+\section{Desperately seeking Majorana}
+\input{moriond/intro.tex}
+\section{Neutrino Experiment with a Xenon TPC (NEXT)}
+\input{moriond/next.tex}
+\section{NEXT White (NEW)}
+\input{moriond/new.tex}
+\section{Background measurement in \NEW}
+\input{moriond/run4.tex} 
+
+\section{NEXT-100}
+\input{moriond/next-100.tex} 
+
+\section{NEXT-2.0}
+\input{moriond/next2.tex} 
+\input{moriond/sabat.tex} 
+
+\section{Summary and outlook}
+
+\begin{frame}
+\frametitle{Summary and outlook}
+\begin{itemize} 
+\item  After successful operation of the \NEW\ demonstrator we expect to commission NEXT-100 in 2020. 
+\item We intend to operate NEXT-100 for about one year, to measure our background index and then upgrade the detector to a ``high-definition'' version, while we keep working in our SMFI barium tagging program. Thus we intend to keep open our option for an ``incremental" (HD) or ``disruptive'' (BOLD) NEXT-2.0 detector(s) aiming for exposures in the tens of ton year and extremely low backgrounds needed to maximize the chances of a discovery.   
+\end{itemize}
+\end{frame}
+\begin{frame}
+
+\frametitle{The NEXT collaboration}
+  \begin{center}
+      \includegraphics[width=0.85\textwidth]{moriond/next-coll.png}
+  \end{center}
+\end{frame}
+
+
+\end{document}
